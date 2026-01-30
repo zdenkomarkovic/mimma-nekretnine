@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Facebook, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Send, Instagram } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { sendMail } from "@/lib/send-mail";
 import { toast } from "sonner";
+import { FaTiktok } from "react-icons/fa";
 
 export default function KontaktPage() {
   const [formData, setFormData] = useState({
@@ -54,23 +55,28 @@ export default function KontaktPage() {
   };
 
   return (
-    <main className="min-h-screen pb-12">
-      <div className="w-full bg-primary h-20"></div>
-      <div className="container pt-10 mx-auto px-4 md:px-10 max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4 text-center">
-            Kontaktirajte nas
-          </h1>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Imate pitanja? Želite da zakažete razgledanje nekretnine? Tu smo da
-            vam pomognemo!
-          </p>
-        </motion.div>
+    <main className="min-h-screen">
+      {/* Hero sekcija */}
+      <section className="bg-gradient-to-br from-primary via-primary/90 to-primary/60 text-white py-24 md:py-28">
+        <div className="container mx-auto px-2 md:px-10 max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Kontaktirajte Nas
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+              Imate pitanja? Želite da zakažete razgledanje? Tu smo da vam
+              pomognemo da pronađete savršenu nekretninu!
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
+      <div className="container mx-auto px-2 md:px-10 max-w-6xl -mt-10 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Kontakt Informacije */}
           <motion.div
@@ -78,108 +84,119 @@ export default function KontaktPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-card rounded-lg p-8 shadow-lg h-full">
-              <h2 className="text-2xl font-bold mb-6 text-primary">
-                Naše Informacije
-              </h2>
+            <div className="bg-card rounded-2xl px-2 py-6 shadow-xl border border-primary/10 h-full">
+              <div className="flex items-center gap-2 mb-5">
+                <div className="h-1 w-10 bg-primary rounded-full"></div>
+                <h2 className="text-xl font-bold text-primary">
+                  Naše Informacije
+                </h2>
+              </div>
 
-              <div className="space-y-6">
-                {/* Fiksni telefoni */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold mb-2">Fiksni telefoni</h3>
-                    <div className="space-y-1.5">
-                      <Link
-                        href="tel:014293923"
-                        className="block text-muted-foreground hover:text-primary transition-colors font-medium"
-                      >
-                        014/293-923
-                      </Link>
-                      <Link
-                        href="tel:014293920"
-                        className="block text-muted-foreground hover:text-primary transition-colors font-medium"
-                      >
-                        014/293-920
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
+              <div className="space-y-4">
                 {/* Mobilni telefon */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <Phone className="w-6 h-6 text-primary" />
+                <div className="flex items-center gap-4 px-2 py-4 rounded-xl hover:bg-primary/5 transition-all group">
+                  <div className="bg-primary p-2.5 rounded-full group-hover:bg-primary/20 transition-colors">
+                    <Phone className="w-5 h-5 text-muted" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold mb-2">Mob/Viber/WhatsApp</h3>
-                    <Link
-                      href="tel:+381638226026"
-                      className="block text-muted-foreground hover:text-primary transition-colors font-medium"
-                    >
-                      +381 63 822 6026
-                    </Link>
-                  </div>
+
+                  <Link
+                    href="tel:0604880885"
+                    className="block text-muted-foreground hover:text-primary transition-colors font-medium text-lg"
+                  >
+                    060 488 0885
+                  </Link>
                 </div>
 
                 {/* Email */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-primary" />
+                <div className="flex items-center gap-4 px-2 py-4 rounded-xl hover:bg-primary/5 transition-all group">
+                  <div className="bg-primary p-2.5 rounded-full group-hover:bg-primary/20 transition-colors">
+                    <Mail className="w-5 h-5 text-muted" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold mb-2">Email</h3>
-                    <Link
-                      href="mailto:bonafidesnova@gmail.com"
-                      className="block text-muted-foreground hover:text-primary transition-colors font-medium break-all"
-                    >
-                      bonafidesnova@gmail.com
-                    </Link>
-                  </div>
+
+                  <Link
+                    href="mailto:mimmanekretnine@gmail.com"
+                    className="block text-muted-foreground hover:text-primary transition-colors font-medium break-all text-base"
+                  >
+                    mimmanekretnine@gmail.com
+                  </Link>
                 </div>
 
                 {/* Adresa */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-primary" />
+                <div className="flex items-center gap-3 px-2 py-4 rounded-xl hover:bg-primary/5 transition-all group">
+                  <div className="bg-primary p-2.5 rounded-full group-hover:bg-primary/20 transition-colors">
+                    <MapPin className="w-5 h-5 text-muted" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold mb-2">Adresa kancelarije</h3>
-                    <div className="text-muted-foreground space-y-0.5">
-                      <p className="font-medium">Ul. Karađorđeva br. 123</p>
-                      <p>(u pasažu)</p>
-                      <p>14000 Valjevo, Srbija</p>
-                    </div>
+
+                  <div className="text-muted-foreground space-y-0.5 text-base">
+                    <p className="font-medium">
+                      Nemanjina br8 (ulaz iz Oslobođenja)
+                    </p>
+                    <p className=" text-center">26000 Pančevo, Srbija</p>
                   </div>
                 </div>
 
-                {/* Facebook */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <Facebook className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold mb-2">Facebook</h3>
+                {/* Društvene mreže */}
+                <div className="p-3 rounded-xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20">
+                  <h3 className="font-semibold mb-3 text-base text-foreground flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 bg-primary rounded-full"></span>
+                    Pratite nas
+                  </h3>
+                  <div className="flex gap-2">
                     <Link
-                      href="https://www.facebook.com/bonafidesnekretninevaljevo?locale=sr_RS"
+                      href="https://www.facebook.com/share/177TgNePxv/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1"
+                      className="bg-white hover:bg-primary/10 p-2.5 rounded-lg transition-all hover:scale-110 shadow-sm"
+                      title="Facebook"
                     >
-                      Pratite nas na Facebook-u →
+                      <Facebook className="w-5 h-5 text-primary" />
+                    </Link>
+                    <Link
+                      href="https://www.instagram.com/mimmanekretnine?igsh=MXY5Z3NyaGQ2eHNsMg=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white hover:bg-primary/10 p-2.5 rounded-lg transition-all hover:scale-110 shadow-sm"
+                      title="Instagram"
+                    >
+                      <Instagram className="w-5 h-5 text-primary" />
+                    </Link>
+                    <Link
+                      href="https://www.tiktok.com/@mimmanekretnine?_r=1&_t=ZS-93ORmQnLJ0W"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white hover:bg-primary/10 p-2.5 rounded-lg transition-all hover:scale-110 shadow-sm"
+                      title="TikTok"
+                    >
+                      <FaTiktok className="w-5 h-5 text-primary" />
                     </Link>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-primary/20">
-                <h3 className="font-semibold mb-2">Radno vreme</h3>
-                <div className="text-muted-foreground space-y-1">
-                  <p>Ponedeljak - Petak: 09:00 - 17:00</p>
-                  <p>Subota: 10:00 - 14:00</p>
-                  <p>Nedelja: Zatvoreno</p>
+              <div className="mt-4 p-4 bg-primary/5 rounded-xl border-l-4 border-primary">
+                <h3 className="font-semibold mb-2 text-base text-foreground flex items-center gap-2">
+                  <span className="text-primary">🕐</span>
+                  Radno vreme
+                </h3>
+                <div className="text-muted-foreground space-y-1.5 text-base">
+                  <div className="flex justify-between items-center">
+                    <span>Pon - Pet:</span>
+                    <span className="font-semibold text-foreground">
+                      09:00 - 17:00
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>Subota:</span>
+                    <span className="font-semibold text-foreground">
+                      10:00 - 14:00
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>Nedelja:</span>
+                    <span className="font-semibold text-red-500">
+                      Zatvoreno
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -191,10 +208,13 @@ export default function KontaktPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="bg-card rounded-lg p-8 shadow-lg">
-              <h2 className="text-2xl font-bold mb-6 text-primary">
-                Pošaljite nam poruku
-              </h2>
+            <div className="bg-card rounded-2xl p-8 shadow-xl border border-primary/10">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-1 w-12 bg-primary rounded-full"></div>
+                <h2 className="text-2xl font-bold text-primary">
+                  Pošaljite nam poruku
+                </h2>
+              </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -211,7 +231,7 @@ export default function KontaktPage() {
                     required
                     value={formData.ime}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                     placeholder="Vaše ime i prezime"
                   />
                 </div>
@@ -230,7 +250,7 @@ export default function KontaktPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                     placeholder="vas.email@primer.com"
                   />
                 </div>
@@ -248,7 +268,7 @@ export default function KontaktPage() {
                     name="telefon"
                     value={formData.telefon}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                     placeholder="+381 63 123 4567"
                   />
                 </div>
@@ -300,7 +320,7 @@ export default function KontaktPage() {
             </h2>
             <div className="w-full overflow-hidden rounded-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4040.220749582341!2d19.888601853589403!3d44.271545676902534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759eda13cbeb6cf%3A0x9ab875a9cdf55409!2z0JrQsNGA0LDRktC-0YDRktC10LLQsCAxMjMsINCS0LDRmdC10LLQviAxNDAwMA!5e0!3m2!1ssr!2srs!4v1767032055206!5m2!1ssr!2srs"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2810.574!2d20.6414!3d44.8697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa3d7b4b5e1%3A0x7e4c9e8f9f5b1234!2sNemanjina%208%2C%20Pancevo%2026000!5e0!3m2!1ssr!2srs!4v1737372000000!5m2!1ssr!2srs"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}

@@ -1,4 +1,4 @@
-# Bonafides Nekretnine - Sanity CMS Setup
+# Mimma Nekretnine - Sanity CMS Setup
 
 Ovaj dokument objašnjava kako da podesite Sanity CMS za vaš sajt za nekretnine.
 
@@ -7,7 +7,7 @@ Ovaj dokument objašnjava kako da podesite Sanity CMS za vaš sajt za nekretnine
 1. Posetite [https://www.sanity.io/manage](https://www.sanity.io/manage)
 2. Registrujte se ili se prijavite
 3. Kliknite "Create project"
-4. Izaberite ime projekta (npr. "bonafides-nekretnine")
+4. Izaberite ime projekta (npr. "mimma-nekretnine")
 5. Kopirajte **Project ID** koji će vam biti prikazan
 
 ## Korak 2: Kreirajte Dataset
@@ -91,7 +91,7 @@ Kreirajte sledeće kategorije u Sanity Studio:
    - URL Slug (generiše se automatski)
    - Kategorija (izaberite jednu od gore kreiranih)
    - Cena (u EUR)
-   - Lokacija (npr. "Valjevo, Centar")
+   - Lokacija (npr. "Pančevo, Centar")
    - Površina (u m²)
    - Broj soba
    - Broj kupatila

@@ -4,8 +4,8 @@ import Mailjet from "node-mailjet";
 
 const MAILJET_API_KEY = process.env.MAILJET_API_KEY;
 const MAILJET_SECRET_KEY = process.env.MAILJET_SECRET_KEY;
-const SITE_MAIL_SENDER = process.env.SITE_MAIL_SENDER || "bonafidesnova@gmail.com";
-const SITE_MAIL_RECEIVER = process.env.SITE_MAIL_RECEIVER || "bonafidesnova@gmail.com";
+const SITE_MAIL_SENDER = process.env.SITE_MAIL_SENDER || "mimmanekretnine@gmail.com";
+const SITE_MAIL_RECEIVER = process.env.SITE_MAIL_RECEIVER || "mimmanekretnine@gmail.com";
 
 const mailjet = Mailjet.apiConnect(
   MAILJET_API_KEY || "",
@@ -31,12 +31,12 @@ export async function sendMail({
         {
           From: {
             Email: SITE_MAIL_SENDER,
-            Name: "Bonafides Nekretnine",
+            Name: "Mimma Nekretnine",
           },
           To: [
             {
               Email: sendTo || SITE_MAIL_RECEIVER,
-              Name: "Bonafides",
+              Name: "Mimma Nekretnine",
             },
           ],
           Subject: subject,

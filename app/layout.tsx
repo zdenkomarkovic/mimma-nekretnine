@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bona Fides Nekretnine Nova - Agencija za Nekretnine Valjevo",
+  title: "Mimma Nekretnine - Agencija za Nekretnine Pančevo",
   description:
-    "Profesionalna agencija za nekretnine u Valjevu. Kupovina i prodaja stanova, kuća, poslovnih prostora i placeva. Licencirani agenti i kompletna pravna podrška.",
+    "Profesionalna agencija za nekretnine u Pančevu. Kupovina i prodaja stanova, kuća, poslovnih prostora i placeva. Licencirani agenti i kompletna pravna podrška.",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -23,20 +23,20 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   keywords: [
     "nekretnine",
-    "valjevo",
+    "pančevo",
     "agencija",
     "stanovi",
     "kuće",
     "poslovni prostori",
     "placevi",
-    "bona fides",
-    "nekretnine valjevo",
+    "mimma nekretnine",
+    "nekretnine pančevo",
     "kupovina",
     "prodaja",
     "iznajmljivanje",
   ],
   alternates: {
-    canonical: "https://www.bonafides-nova.rs/",
+    canonical: "https://www.mimmanekretnine.rs/",
   },
 };
 

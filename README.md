@@ -1,6 +1,6 @@
-# Bona Fides Nekretnine Nova - Website
+# Mimma Nekretnine - Website
 
-Profesionalni sajt za agenciju za nekretnine Bona Fides Nekretnine Nova u Valjevu.
+Profesionalni sajt za agenciju za nekretnine Mimma Nekretnine u Pančevu.
 
 ## Tehnologije
 
@@ -18,14 +18,14 @@ Profesionalni sajt za agenciju za nekretnine Bona Fides Nekretnine Nova u Valjev
 - 🔍 **Pretraga nekretnina** - Filtriranje po kategoriji, ceni, površini, broju soba
 - 📋 **Detalji nekretnina** - Kompletne informacije, galerija slika, kontakt forma
 - 📱 **Responsive design** - Prilagođeno za sve uređaje
-- 🎨 **Purple theme** - Brendirane boje prema Bonafides identitetu
+- 🎨 **Purple theme** - Brendirane boje prema Mimma Nekretnine identitetu
 - 📝 **Sanity CMS** - Jednostavno upravljanje sadržajem
 - 🖼️ **Image optimization** - Automatski optimizovane slike
 
 ## Struktura Projekta
 
 ```
-bonafides/
+mimma-nekretnine/
 ├── app/                      # Next.js app directory
 │   ├── nekretnine/          # Properties listing & detail pages
 │   ├── o-nama/              # About page
@@ -127,12 +127,14 @@ Možete koristiti bilo koju platformu koja podržava Next.js:
 
 ## Kontakt Informacije
 
-- **Email:** snezanaa50@gmail.com
-- **Telefon:** 014/293-923, 014/293-920
-- **Mob/Viber/WhatsApp:** +381 63 822 6026
-- **Adresa:** Ul. Karađorđeva br. 123 (u pasažu), Valjevo
+- **Email:** mimmanekretnine@gmail.com
+- **Telefon:** 060 488 0885
+- **Adresa:** Nemanjina br8 (ulaz iz Oslobođenja), 26000 Pančevo
+- **Facebook:** https://www.facebook.com/share/177TgNePxv/
+- **Instagram:** https://www.instagram.com/mimmanekretnine?igsh=MXY5Z3NyaGQ2eHNsMg==
+- **TikTok:** https://www.tiktok.com/@mimmanekretnine?_r=1&_t=ZS-93ORmQnLJ0W
 - **Registarski broj:** 952
 
 ## License
 
-© 2025 Bona Fides Nekretnine Nova. Sva prava zadržana.
+© 2025 Mimma Nekretnine. Sva prava zadržana.

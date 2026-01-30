@@ -189,18 +189,8 @@ export default async function PropertyPage({ params }: { params: { slug: string 
                 <FaPhone className="mr-3 text-primary" />
                 <div>
                   <div className="text-sm text-muted-foreground">Telefon</div>
-                  <a href="tel:014293923" className="font-semibold hover:text-primary">
-                    014/293-923
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center">
-                <FaPhone className="mr-3 text-primary" />
-                <div>
-                  <div className="text-sm text-muted-foreground">Telefon 2</div>
-                  <a href="tel:014293920" className="font-semibold hover:text-primary">
-                    014/293-920
+                  <a href="tel:0604880885" className="font-semibold hover:text-primary">
+                    060 488 0885
                   </a>
                 </div>
               </div>
@@ -210,20 +200,10 @@ export default async function PropertyPage({ params }: { params: { slug: string 
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
                   <a
-                    href="mailto:bonafidesnova@gmail.com"
+                    href="mailto:mimmanekretnine@gmail.com"
                     className="font-semibold hover:text-primary"
                   >
-                    bonafidesnova@gmail.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center">
-                <FaPhone className="mr-3 text-primary" />
-                <div>
-                  <div className="text-sm text-muted-foreground">Mob/Viber/WhatsApp</div>
-                  <a href="tel:+381638226026" className="font-semibold hover:text-primary">
-                    +381 63 822 6026
+                    mimmanekretnine@gmail.com
                   </a>
                 </div>
               </div>
@@ -247,11 +227,11 @@ export default async function PropertyPage({ params }: { params: { slug: string 
               <strong>Adresa kancelarije:</strong>
             </p>
             <p className="text-sm">
-              Ul. Karađorđeva br. 123
+              Nemanjina br8
               <br />
-              (u pasažu)
+              (ulaz iz Oslobođenja)
               <br />
-              Valjevo, Srbija
+              26000 Pančevo, Srbija
             </p>
           </div>
         </div>

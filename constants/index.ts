@@ -8,10 +8,6 @@ export const navList = [
     link: "/nekretnine",
   },
   {
-    title: "O Nama",
-    link: "/o-nama",
-  },
-  {
     title: "Kontakt",
     link: "/kontakt",
   },

@@ -76,7 +76,7 @@ const MobileMenu = ({
                             <SheetClose asChild key={category._id}>
                               <Link
                                 className="pl-6 block font-light py-2"
-                                href={`/nekretnine?kategorija=${category.slug?.current || ''}`}
+                                href={`/nekretnine?kategorija=${category.slug?.current || ""}`}
                               >
                                 <li>{category.title}</li>
                               </Link>
@@ -142,7 +142,7 @@ const DesktopNav = ({
                 >
                   <Link
                     className="px-2 py-2 block"
-                    href={`/nekretnine?kategorija=${category.slug?.current || ''}`}
+                    href={`/nekretnine?kategorija=${category.slug?.current || ""}`}
                   >
                     {category.title}
                   </Link>
@@ -210,14 +210,14 @@ export default function Header() {
         <Link href="/" className="">
           <Image
             src={Logo}
-            alt="Bona Fides Nekretnine Nova"
+            alt="Mimma Nekretnine"
             width={80}
             height={80}
-            className=""
+            className="rounded-full"
           />
         </Link>
         <DesktopNav categories={categories} scrolled={scrolled} />
-        <Link href="tel:+381638226026">
+        <Link href="tel:0604880885">
           <motion.button
             animate={{
               color: scrolled ? "hsl(var(--primary))" : "#ffffff",
@@ -229,7 +229,7 @@ export default function Header() {
             className="items-center justify-center rounded-full border-2 text-sm md:text-lg py-1 px-2 md:py-2 md:px-4 transition-colors flex gap-2"
           >
             <PhoneIcon />
-            <p className="">+381 63 822 6026</p>
+            <p className="">060 488 0885</p>
           </motion.button>
         </Link>
         <MobileMenu categories={categories} scrolled={scrolled} />

@@ -3,24 +3,24 @@ import { Star } from 'lucide-react'
 const testimonials = [
   {
     id: 1,
-    name: "Marko Petrović",
+    name: "Milica Todorović",
     role: "Kupac stana",
     image: "https://i.pravatar.cc/150?img=12",
-    content: "Profesionalan pristup i brza prodaja. Preporučujem svima koji traže pouzdanu agenciju za nekretnine.",
+    content: "Tim Mimma Nekretnine mi je pomogao da pronađem savršen stan u Pančevu. Profesionalnost, strpljenje i podrška tokom celog procesa - toplo preporučujem!",
     rating: 5
   },
   {
     id: 2,
-    name: "Ana Jovanović",
-    role: "Vlasnik kuće",
-    content: "Zahvaljujući Bonafides timu, prodala sam kuću po odličnoj ceni. Sve pohvale za transparentnost i posvećenost.",
+    name: "Dejan Marković",
+    role: "Prodavac kuće",
+    content: "Prodao sam kuću za samo mesec dana! Zahvaljujući njihovoj stručnosti i posvećenosti, cela transakcija je prošla glatko. Hvala vam na svemu!",
     rating: 5
   },
   {
     id: 3,
-    name: "Stefan Nikolić",
-    role: "Investitor",
-    content: "Odlično iskustvo! Pomogli su mi da pronađem savršenu nekretninu za investiciju. Stručni savet i podrška tokom celog procesa.",
+    name: "Jelena Nikolić",
+    role: "Kupac poslovnog prostora",
+    content: "Izuzetno zadovoljna saradnjom. Pomogli su mi da pronađem idealan poslovni prostor za moju radnju. Profesionalnost na najvišem nivou!",
     rating: 5
   }
 ]
