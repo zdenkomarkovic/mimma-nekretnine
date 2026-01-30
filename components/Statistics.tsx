@@ -16,7 +16,7 @@ const stats = [
   {
     id: 3,
     icon: Award,
-    value: "25+",
+    value: "15+",
     label: "Godina Iskustva",
   },
   {
