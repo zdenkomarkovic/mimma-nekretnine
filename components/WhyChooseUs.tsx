@@ -1,4 +1,4 @@
-import { FaAward, FaUsers, FaGavel, FaHandshake } from "react-icons/fa";
+import { FaAward, FaUsers, FaGavel, FaHandshake, FaTruck } from "react-icons/fa";
 import Image from "next/image";
 
 const features = [
@@ -26,6 +26,12 @@ const features = [
     description:
       "Zvanično registrovani posrednici - vaša garancija profesionalnosti i pouzdanosti",
   },
+  {
+    icon: FaTruck,
+    title: "Usluge Selidbe",
+    description:
+      "Nudimo profesionalne usluge selidbe sa sopstvenim vozilom - kompletan servis za vaš bezbrižan preseljenje",
+  },
 ];
 
 export default function WhyChooseUs() {
@@ -40,7 +46,7 @@ export default function WhyChooseUs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="inline-block bg-primary/10 p-6 rounded-full mb-4">
@@ -88,6 +94,44 @@ export default function WhyChooseUs() {
                     quality={90}
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Usluge Selidbe Sekcija */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Leva strana - Slika */}
+              <div className="flex justify-center lg:justify-start">
+                <div className="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/2.jpg"
+                    alt="Usluge Selidbe - Mimma Nekretnine"
+                    fill
+                    className="object-cover"
+                    quality={90}
+                  />
+                </div>
+              </div>
+
+              {/* Desna strana - Tekst */}
+              <div>
+                <h2 className="text-4xl font-bold mb-6 text-primary">
+                  Usluge Selidbe
+                </h2>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Pored naših usluga posredovanja u prometu nekretnina, nudimo i profesionalne usluge selidbe sa sopstvenim vozilom.
+                </p>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Razumemo da selidba može biti stresna, zato smo tu da vam olakšamo ceo proces. Naša ekipa brižljivo rukuje vašim stvarima i garantuje siguran transport.
+                </p>
+                <p className="text-lg font-semibold text-primary">
+                  Kompletan servis za vaše bezbrižno preseljenje!
+                </p>
               </div>
             </div>
           </div>

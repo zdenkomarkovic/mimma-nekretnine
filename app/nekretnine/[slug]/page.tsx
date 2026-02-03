@@ -4,6 +4,7 @@ import { getPropertyBySlug, getAllProperties } from "@/sanity/lib/api";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 import PropertyImageGallery from "@/components/PropertyImageGallery";
+import { Metadata } from "next";
 import {
   FaBed,
   FaBath,
@@ -24,6 +25,48 @@ import {
 } from "react-icons/fa";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const property = await getPropertyBySlug(params.slug);
+
+  if (!property) {
+    return {
+      title: "Nekretnina nije pronađena - Mimma Nekretnine",
+    };
+  }
+
+  const imageUrl = property.images?.[0]
+    ? urlFor(property.images[0]).width(1200).height(630).url()
+    : "/logo.png";
+
+  return {
+    title: `${property.title} - Mimma Nekretnine`,
+    description: property.description || `${property.title} u Pančevu. Kontaktirajte nas za više informacija.`,
+    openGraph: {
+      title: `${property.title} - Mimma Nekretnine`,
+      description: property.description || `${property.title} u Pančevu`,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: property.title,
+        },
+      ],
+      url: `https://www.nekretninemimma.rs/nekretnine/${params.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${property.title} - Mimma Nekretnine`,
+      description: property.description || `${property.title} u Pančevu`,
+      images: [imageUrl],
+    },
+  };
+}
 
 export async function generateStaticParams() {
   try {

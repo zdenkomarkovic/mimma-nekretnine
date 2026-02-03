@@ -28,8 +28,8 @@ export default function Hero() {
           </p>
           <p className="text-sm md:text-lg mt-40 md:mt-0 mb-6 md:mb-10 text-white/95 max-w-2xl drop-shadow-lg">
             Sa nama je kupovina ili prodaja nekretnine jednostavna. Naš tim
-            iskusnih stručnjaka vam pruža podršku u svakom koraku - od pravne
-            pomoći do finansijskog saveta.
+            iskusnih stručnjaka vam pruža podršku u svakom koraku - od izbora
+            nekretnine do pomoći u selidbi.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
