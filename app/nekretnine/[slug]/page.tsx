@@ -5,6 +5,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 import PropertyImageGallery from "@/components/PropertyImageGallery";
 import { Metadata } from "next";
+import { portableTextToPlainText } from "@/lib/portableTextToPlainText";
 import {
   FaBed,
   FaBath,
@@ -43,12 +44,17 @@ export async function generateMetadata({
     ? urlFor(property.images[0]).width(1200).height(630).url()
     : "/logo.png";
 
+  const plainTextDescription = portableTextToPlainText(property.description);
+  const metaDescription = plainTextDescription
+    ? plainTextDescription.slice(0, 160)
+    : `${property.title} u Pančevu. Kontaktirajte nas za više informacija.`;
+
   return {
     title: `${property.title} - Mimma Nekretnine`,
-    description: property.description || `${property.title} u Pančevu. Kontaktirajte nas za više informacija.`,
+    description: metaDescription,
     openGraph: {
       title: `${property.title} - Mimma Nekretnine`,
-      description: property.description || `${property.title} u Pančevu`,
+      description: metaDescription,
       images: [
         {
           url: imageUrl,
@@ -62,7 +68,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: `${property.title} - Mimma Nekretnine`,
-      description: property.description || `${property.title} u Pančevu`,
+      description: metaDescription,
       images: [imageUrl],
     },
   };
