@@ -33,6 +33,11 @@ export interface Property {
   yearBuilt?: number
   description?: any[]
   images?: PropertyImage[]
+  video?: {
+    asset: {
+      url: string
+    }
+  }
   features?: string[]
   heating?: string
   parking?: boolean

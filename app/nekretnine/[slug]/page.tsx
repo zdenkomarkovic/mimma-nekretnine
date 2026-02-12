@@ -4,6 +4,7 @@ import { getPropertyBySlug, getAllProperties } from "@/sanity/lib/api";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 import PropertyImageGallery from "@/components/PropertyImageGallery";
+import PropertyVideo from "@/components/PropertyVideo";
 import { Metadata } from "next";
 import { portableTextToPlainText } from "@/lib/portableTextToPlainText";
 import {
@@ -152,6 +153,13 @@ export default async function PropertyPage({
               <PropertyImageGallery
                 images={imageUrls}
                 propertyTitle={property.title || "Nekretnina"}
+              />
+            )}
+
+            {property.video?.asset?.url && (
+              <PropertyVideo
+                videoUrl={property.video.asset.url}
+                title={property.title || "Nekretnina"}
               />
             )}
 

@@ -108,6 +108,11 @@ export const propertyBySlugQuery = groq`
       },
       alt
     },
+    video {
+      asset->{
+        url
+      }
+    },
     features,
     heating,
     parking,

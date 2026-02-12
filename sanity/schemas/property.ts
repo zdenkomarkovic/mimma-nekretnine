@@ -134,6 +134,15 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'video',
+      title: 'Video',
+      type: 'file',
+      description: 'Upload video fajla (MP4, WebM...)',
+      options: {
+        accept: 'video/*',
+      },
+    }),
+    defineField({
       name: 'features',
       title: 'Karakteristike',
       type: 'array',
