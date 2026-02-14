@@ -1,9 +1,11 @@
-import { SanityClient } from '@sanity/client'
+interface SanityClientLike {
+  fetch: <R = unknown>(query: string, params?: Record<string, unknown>) => Promise<R>
+}
 
 export async function generateUniqueSlug(
   baseSlug: string,
   documentId: string | undefined,
-  client: SanityClient
+  client: SanityClientLike
 ): Promise<string> {
   let slug = baseSlug
   let counter = 1
