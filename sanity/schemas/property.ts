@@ -32,7 +32,7 @@ export default defineType({
             .slice(0, 96)
 
           const client = context.getClient({ apiVersion: '2024-01-01' })
-          const documentId = context.document?._id
+          const documentId = (context as any).document?._id as string | undefined
 
           return generateUniqueSlug(baseSlug, documentId, client)
         },
