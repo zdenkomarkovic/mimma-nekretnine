@@ -1,4 +1,5 @@
 import { defineType, defineField } from 'sanity'
+import { generateUniqueSlug } from '../lib/slugUtils'
 
 export default defineType({
   name: 'property',
@@ -18,8 +19,8 @@ export default defineType({
       options: {
         source: 'title',
         maxLength: 96,
-        slugify: (input) => {
-          return input
+        slugify: async (input, _schemaType, context) => {
+          const baseSlug = input
             .toLowerCase()
             .replace(/ć/g, 'c')
             .replace(/č/g, 'c')
@@ -29,6 +30,11 @@ export default defineType({
             .replace(/\s+/g, '-')
             .replace(/[^a-z0-9-]/g, '')
             .slice(0, 96)
+
+          const client = context.getClient({ apiVersion: '2024-01-01' })
+          const documentId = context.document?._id
+
+          return generateUniqueSlug(baseSlug, documentId, client)
         },
         isUnique: async (slug, context) => {
           const { document, getClient } = context
