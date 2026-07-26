@@ -1,5 +1,6 @@
 import { FaAward, FaUsers, FaGavel, FaHandshake, FaTruck } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const features = [
   {
@@ -85,15 +86,18 @@ export default function WhyChooseUs() {
 
               {/* Desna strana - Slika */}
               <div className="flex justify-center lg:justify-end">
-                <div className="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <Link
+                  href="/kontakt"
+                  className="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden shadow-2xl block group"
+                >
                   <Image
                     src="/1.jpg"
                     alt="Mimma Nekretnine Tim"
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                     quality={90}
                   />
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -107,15 +111,18 @@ export default function WhyChooseUs() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Leva strana - Slika */}
               <div className="flex justify-center lg:justify-start">
-                <div className="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <Link
+                  href="/kontakt"
+                  className="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden shadow-2xl block group"
+                >
                   <Image
                     src="/2.jpg"
                     alt="Usluge Selidbe - Mimma Nekretnine"
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                     quality={90}
                   />
-                </div>
+                </Link>
               </div>
 
               {/* Desna strana - Tekst */}

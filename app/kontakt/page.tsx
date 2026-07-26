@@ -199,6 +199,15 @@ export default function KontaktPage() {
                   </div>
                 </div>
               </div>
+
+              <div className="mt-4 text-center">
+                <Link
+                  href="/opsti-uslovi-poslovanja"
+                  className="text-primary hover:underline text-sm font-medium"
+                >
+                  Opšti uslovi poslovanja i cenovnik
+                </Link>
+              </div>
             </div>
           </motion.div>
 

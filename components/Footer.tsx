@@ -77,6 +77,13 @@ export default function Footer() {
               >
                 Kontakt
               </Link>
+
+              <Link
+                href="/opsti-uslovi-poslovanja"
+                className="block hover:text-muted/70 transition-colors"
+              >
+                Opšti uslovi poslovanja
+              </Link>
             </div>
           </div>
 
