@@ -6,6 +6,7 @@ import PropertyGrid from "@/components/PropertyGrid";
 import PropertyFilter, { FilterState } from "@/components/PropertyFilter";
 import { Property, Category } from "@/types/property";
 import { getAllProperties, getCategories } from "@/sanity/lib/api";
+import { normalizeSearchText } from "@/lib/utils";
 
 function PropertiesPageContent() {
   const [properties, setProperties] = useState<Property[]>([]);
@@ -58,13 +59,11 @@ function PropertiesPageContent() {
     let filtered = [...properties];
 
     if (filters.search) {
-      const searchLower = filters.search.toLowerCase();
+      const searchNormalized = normalizeSearchText(filters.search);
       filtered = filtered.filter(
         (p) =>
-          p.title?.toLowerCase().includes(searchLower) ||
-          false ||
-          p.location?.toLowerCase().includes(searchLower) ||
-          false
+          (p.title ? normalizeSearchText(p.title).includes(searchNormalized) : false) ||
+          (p.location ? normalizeSearchText(p.location).includes(searchNormalized) : false)
       );
     }
 

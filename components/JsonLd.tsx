@@ -36,8 +36,8 @@ export default function JsonLd() {
     ],
     sameAs: [
       "https://www.facebook.com/share/177TgNePxv/",
-      "https://www.instagram.com/mimmanekretnine",
-      "https://www.tiktok.com/@mimmanekretnine",
+      "https://www.instagram.com/nekretninemimma.rs",
+      "https://www.tiktok.com/@nekretninemimma.rs",
     ],
     areaServed: {
       "@type": "City",

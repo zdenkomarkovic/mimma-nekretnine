@@ -152,7 +152,7 @@ export default function KontaktPage() {
                       <Facebook className="w-5 h-5 text-primary" />
                     </Link>
                     <Link
-                      href="https://www.instagram.com/mimmanekretnine?igsh=MXY5Z3NyaGQ2eHNsMg=="
+                      href="https://www.instagram.com/nekretninemimma.rs?utm_source=qr&igsi=MXY5Z3NyaGQ2eHNsMg=="
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-white hover:bg-primary/10 p-2.5 rounded-lg transition-all hover:scale-110 shadow-sm"
@@ -161,7 +161,7 @@ export default function KontaktPage() {
                       <Instagram className="w-5 h-5 text-primary" />
                     </Link>
                     <Link
-                      href="https://www.tiktok.com/@mimmanekretnine?_r=1&_t=ZS-93ORmQnLJ0W"
+                      href="https://www.tiktok.com/@nekretninemimma.rs?_r=1&_t=ZS-99OwGartAzA"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-white hover:bg-primary/10 p-2.5 rounded-lg transition-all hover:scale-110 shadow-sm"

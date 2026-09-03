@@ -100,7 +100,7 @@ export default function Footer() {
                 <Facebook className="w-6 h-6" />
               </Link>
               <Link
-                href="https://www.instagram.com/mimmanekretnine?igsh=MXY5Z3NyaGQ2eHNsMg=="
+                href="https://www.instagram.com/nekretninemimma.rs?utm_source=qr&igsi=MXY5Z3NyaGQ2eHNsMg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-muted/70 transition-colors"
@@ -108,7 +108,7 @@ export default function Footer() {
                 <Instagram className="w-6 h-6" />
               </Link>
               <Link
-                href="https://www.tiktok.com/@mimmanekretnine?_r=1&_t=ZS-93ORmQnLJ0W"
+                href="https://www.tiktok.com/@nekretninemimma.rs?_r=1&_t=ZS-99OwGartAzA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-muted/70 transition-colors"

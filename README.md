@@ -131,8 +131,8 @@ Možete koristiti bilo koju platformu koja podržava Next.js:
 - **Telefon:** 060 488 0885
 - **Adresa:** Nemanjina br8 (ulaz iz Oslobođenja), 26000 Pančevo
 - **Facebook:** https://www.facebook.com/share/177TgNePxv/
-- **Instagram:** https://www.instagram.com/mimmanekretnine?igsh=MXY5Z3NyaGQ2eHNsMg==
-- **TikTok:** https://www.tiktok.com/@mimmanekretnine?_r=1&_t=ZS-93ORmQnLJ0W
+- **Instagram:** https://www.instagram.com/nekretninemimma.rs?utm_source=qr&igsi=MXY5Z3NyaGQ2eHNsMg==
+- **TikTok:** https://www.tiktok.com/@nekretninemimma.rs?_r=1&_t=ZS-99OwGartAzA
 - **Registarski broj:** 952
 
 ## License
